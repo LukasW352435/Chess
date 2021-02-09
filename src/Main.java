@@ -1,16 +1,14 @@
-import javax.swing.*;
+import ChessLib.ChessBoard;
+import ChessLib.ChessPos;
+import ChessLib.Color;
+import ChessLib.Pos;
 
 public class Main {
-    public static void main(String[] args) {
-        JFrame f = new JFrame();//creating instance of JFrame
-
-        JButton b = new JButton("click");//creating instance of JButton
-        b.setBounds(130, 100, 100, 40);//x axis, y axis, width, height
-
-        f.add(b);//adding button in JFrame
-
-        f.setSize(400, 500);//400 width and 500 height
-        f.setLayout(null);//using no layout managers
-        f.setVisible(true);//making the frame visible
+    public static void main(String[] args) throws Exception {
+        ChessBoard c = new ChessBoard();
+        System.out.println(c);
+        c.move(Color.white,new Pos(ChessPos.E, ChessPos.One),new Pos(ChessPos.F, ChessPos.Two));
+        System.out.println();
+        System.out.println(c);
     }
 }  
